@@ -1,0 +1,229 @@
+:root{
+    font-size: 16px;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+.fas{
+    font-size: 1rem;
+}
+
+h1{
+    margin: 0;
+}
+
+.btn{
+    padding: 10px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.btn-primary{
+    background-color: black;
+    color: white;
+}
+
+.btn .fas{
+    margin-left: 10px;
+}
+
+h1, h2{
+    color: white;
+}
+
+.hero h2{
+    font-size: 4rem;
+    text-shadow: 2px 2px black;
+}
+
+.hero .btn{
+    font-size: 1.2rem;
+    padding: 20px 25px;
+}
+
+fieldset, form .btn-wrapper{
+    margin-top: 15px;
+}
+
+body{
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    min-height: 100vh;
+    background-image: url(https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg);
+    background-size:cover;
+    background-position-y: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+body > header,
+    main,
+    body > footer{
+        padding: 15px;
+    }
+
+body > header{
+    background-color: rgba(75, 75, 75, 0.5);
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+}
+
+body > header section{
+    flex-grow: 1;
+}
+
+body > header nav{
+    flex-grow: 2;
+}
+
+body > header nav a:not(.btn){
+    line-height: 2;
+}
+
+body > header nav ul{
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+body > header nav a, a.btn{
+    color: inherit;
+    text-decoration: none;
+}
+
+nav ul{
+    list-style: none;
+}
+
+main{
+    min-height: calc(100vh - 264px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+}
+
+main section{
+    float: left;
+}
+
+body > footer{
+    min-height: 100px;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+body > footer form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body > footer form .btn{
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+body > footer form .btn .fas{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+form .btn-wrapper, fieldset{
+    padding: 0;
+}
+
+form .btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;    
+}
+
+body > footer fieldset{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 0;
+}
+
+body > footer fieldset div{
+    padding: 15px 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    position: relative;
+}
+
+body > footer fieldset div .fas{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+body > footer fieldset div input{
+    flex-grow: 1;
+    margin-left: calc(1em + 15px);
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"]{
+    line-height: 2rem;
+    border: 0;
+}
+
+label, input{
+    font-size: 1.2rem;
+}
+
+input:focus-visible {
+    outline: 0;
+}
+
+@media(min-width: 576px){
+    body > header,
+    main,
+    body > footer{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    body > header{
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    body > header nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main section{
+        width: 50%;
+    }
+
+    form .btn-wrapper{
+        margin-top: 0;
+    }
+
+    fieldset, form .btn-wrapper{
+        padding: 15px;
+    }
+}
